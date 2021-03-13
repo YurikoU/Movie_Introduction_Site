@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+}
+
+body {
+  color: rgb(170, 170, 160);
+  text-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+  background-color: rgba(183, 149, 116, 0.6);
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: rgb(170, 170, 160);
+  text-shadow: 0px 0px 1px rgba(50, 50, 50, 0.2);
+}
+
+
+/* CSS for the header */
+header {
+  /* to set the photo as background-image on the header */
+  background-image: url(images/scene9.jpg);
+  /* the source of the above photo: https://danieljreddie.wordpress.com/en6010-submission/1-the-obscuring-shadows-of-a-spotless-mind/ */
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center;
+  
+  margin-bottom: 135px;
+}
+
+header > p, h1 {
+  text-align: center;
+}  
+
+header > h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 13px;
+  padding-top: 30px;
+}
+
+header > p {
+  margin-top: 0;
+  font-weight: bold;
+  letter-spacing: 1px; 
+}
+
+/* CSS for the article tag in the main tag */
+article {
+  margin-bottom: 135px;
+}
+
+article > h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(119, 91, 62);
+  margin-bottom: 7px;
+}
+
+.casts {
+  /* to place four photos in center */
+  display: flex;
+  justify-content: center;
+}
+
+.casts > div {
+  /* to place figcaption on the center of the photo */
+  position: relative;
+  width: 250px;
+  margin: 0 18px 0 18px;
+}
+
+.hover > p {
+  /* to place each text on the center of each photo */
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 250px;
+  text-align: center;
+  -webkit-transform : translateY(-75%);
+  transform : translateY(-75%);
+}
+
+.hover {
+  /* to create the shadow that can be seen only when the cursor is over each photo */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background-color:	rgba(25, 25, 15, 0.7);
+  opacity: 0;
+}
+
+.casts > div:hover .hover {
+  /* when the cursor is over each photo, the user can see the actors' and actress' name  */
+  opacity: 1;
+}
+
+.cast1, .cast2, .cast3, .cast4 {
+  /* to give blur around the photos */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px 5px rgba(183, 149, 116, 0.6) inset;
+}
+
+.casts img {
+  /* to give blur around the photos */
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: relative;
+  z-index: -2;
+}
+
+
+/* CSS for the aside tag in the main tag */
+.links {
+  /* to place background photo with 100% width of the screen*/
+  width: 100%;
+  height: 300px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.65), 80% ,rgb(134, 113, 92)), url("images/scene1.jpg");
+  /* the source of the above photo: https://knockedover.wordpress.com/2014/06/16/eternal-sunshine-of-the-spotless-mind-2004/ */
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center;
+  
+  /* to display links in the center of the background photo*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.links a {
+  font-size: 1.2rem;
+  color: rgb(119, 91, 62);
+}
+
+
+/* CSS for the footer */
+footer > p {
+  line-height: 1.5;
+  margin: 0;
+  padding-right: 35px;
+  text-align: end;
+  background-color: rgb(75, 57, 36);
+}
+
+footer > div {  /* to place the hyperlink to the top at the fixed position */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(0, 0 ,0 , 0.7);
+  box-shadow: 1px 1px 1px #ccc;
+  position: fixed;
+  bottom: 45px;
+  right: 30px;
+}
+
+footer > div > a {
+  /* to place the text "TOP" on the center of the circle */
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0%;
+  text-align: center;
+  -webkit-transform : translateY(-50%);
+  transform : translateY(-50%);
+  color: silver;
+}
